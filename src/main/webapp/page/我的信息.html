@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云遗科技-我的信息</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/userinfo.css">
+    <link rel="stylesheet" href=".././museum-master/css/header.css">
+    <link rel="stylesheet" href=".././museum-master/css/关于.css">
+    <script src=".././museum-master/js/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $('.block1 .left ul li').click(function(event) {
+                $(this).addClass('act');
+                $(this).siblings('li').removeClass('act');
+                console.log($(this).index());
+                var b=$(this).index();
+                $('.block1 .right #item').eq(b).addClass('dis');
+                $('.block1 .right #item').eq(b).siblings('#item').removeClass('dis');
+                $('.block1 .right #item').eq(b).siblings('#item').css('display', 'none');
+                $('.block1 .right #item').eq(b).css('display', 'block');
+            });
+            $('.me').click(function(){
+                $('.navbar').css('display','block')
+            });
+            $('.layer .close').click(function(){
+                $('.navbar').css('display','none')
+            });
+        })
+    </script>
+
+
+</head>
+
+<body>
+    <div class="container-fluid  p-0">
+        <header class="top-area animal-top">
+            <div class="header">
+                <div class="wrap">
+                    <div class="logo" style="background:none;">
+                        <a href="../index.html"><img src="../museum-master/img/headerlogo.png" alt="故宫博物院" style="margin-top: 8px;"></a>
+                    </div>
+                    <div class="nav_main">
+                        <ul>
+                            <li><a href="../museum-master/index.html">首页</a><b><img src="" width="18"></b></li>
+                            <li><a href="../museum-master/html/非遗地图.html">非遗地图</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                            <li><a href="非遗查询.html">非遗查询</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                            <li><a href="../museum-master/html/知识图谱.html">知识图谱</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                            <li><a href="../museum-master/html/explore.html">非遗传承人</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                            <li><a href="../museum-master/html/文创.html">文创</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                            <li><a href="../museum-master/html/非遗论坛.html">关于--云遗</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <div class="container user-info">
+            <div class="user-info-card animal-top">
+                <div class="myinfo-card">
+                    <h3 class="myinfo-title"><i class="fa fa-id-card" aria-hidden="true"></i> 个人信息</h3>
+                    <hr>
+                    <div class="myinfo-content row">
+                        <div class="myHead col-lg-3 col-12">
+                            <div class="myHead-frame" href="#userHeadEdit" data-bs-toggle="modal">
+                                <img src="../images/HeadImage/head0.jpg" id="userHeadImage" >
+                            </div>
+                        </div>
+                        <div class="myInfo col-lg-9 col-12">
+                            <div class="myNickname">
+                                <div>昵称：<span class="text-secondary getUsername"></span></div>
+                            </div>
+                            <div class="myGender">
+                                <div>性别：<span class="text-secondary getGender"></span></div>
+                            </div>
+                            <div class="myBirthday">
+                                <div>出生日期：<span class="text-secondary getBirthday"></span></div>
+                            </div>
+                            <div class="myID">
+                                <div class="text-success">用户ID：<span class="getUserID"></span></div>
+                            </div>
+                            <div class="editMyinfo">
+                                <a href="#edit-userInfo" data-bs-toggle="modal">点击编辑我的个人信息</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="myProfile-card animal-top">
+                <div class="myProfile-card-head">
+                    <h3 class="myinfo-title"><i class="fa fa-user"></i> 我的简介</h3>
+                    <hr>
+                </div>
+                <div class="myProfile-card-content">
+                    <p class="getProfile"></p>
+                </div>
+            </div>
+            <div class="myLoved-card animal-top">
+                <div class="myProfile-card-head">
+                    <h3 class="myinfo-title"><i class="fa fa-heart" aria-hidden="true"></i> 我的爱好</h3>
+                    <hr>
+                </div>
+                <div class="myLoved-card-content">
+                    <h3>我的爱好</h3>
+                    <div class="container">
+                        <form class="loved-type row getOrSetLoved" method="GET" id="lovedEdit">
+                            <div class="love-type-card col-lg-3 col-6">
+                                <label for="type1" class="loved-box">
+                                    <input type="checkbox" id="type1" name="loved">
+                                    <div class="loved-font"><i class="fa fa-bed" aria-hidden="true"></i></div>
+                                    <span>睡觉</span>
+                                    <div class="loved-checked"></div>
+                                </label>
+                            </div>
+                            <div class="love-type-card col-lg-3 col-6">
+                                <label for="type2" class="loved-box">
+                                    <input type="checkbox" id="type2" name="loved">
+                                    <div class="loved-font"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                    <span>骑行</span>
+                                    <div class="loved-checked"></div>
+                                </label>
+                            </div>
+                            <div class="love-type-card col-lg-3 col-6">
+                                <label for="type3" class="loved-box">
+                                    <input type="checkbox" id="type3" name="loved">
+                                    <div class="loved-font"><i class="fa fa-grav" aria-hidden="true"></i></div>
+                                    <span>航天</span>
+                                    <div class="loved-checked"></div>
+                                </label>
+                            </div>
+                            <div class="love-type-card col-lg-3 col-6">
+                                <label for="type4" class="loved-box">
+                                    <input type="checkbox" id="type4" name="loved">
+                                    <div class="loved-font"><i class="fa fa-hand-rock-o" aria-hidden="true"></i></div>
+                                    <span>撸猫</span>
+                                    <div class="loved-checked"></div>
+                                </label>
+                            </div>
+                            <div class="love-type-card col-lg-3 col-6">
+                                <label for="type5" class="loved-box">
+                                    <input type="checkbox" id="type5" name="loved">
+                                    <div class="loved-font"><i class="fa fa-car" aria-hidden="true"></i></div>
+                                    <span>旅行</span>
+                                    <div class="loved-checked"></div>
+                                </label>
+                            </div>
+                            <div class="love-type-card col-lg-3 col-6">
+                                <label for="type6" class="loved-box">
+                                    <input type="checkbox" id="type6" name="loved">
+                                    <div class="loved-font"><i class="fa fa-gamepad" aria-hidden="true"></i></div>
+                                    <span>游戏</span>
+                                    <div class="loved-checked"></div>
+                                </label>
+                            </div>
+                            <div class="love-type-card col-lg-3 col-6">
+                                <label for="type7" class="loved-box">
+                                    <input type="checkbox" id="type7" name="loved">
+                                    <div class="loved-font"><i class="fa fa-hourglass-half" aria-hidden="true"></i></div>
+                                    <span>静坐</span>
+                                    <div class="loved-checked"></div>
+                                </label>
+                            </div>
+                            <div class="love-type-card col-lg-3 col-6">
+                                <label for="type8" class="loved-box">
+                                    <input type="checkbox" id="type8" name="loved">
+                                    <div class="loved-font"><i class="fa fa-globe" aria-hidden="true"></i> </div>
+                                    <span>风景</span>
+                                    <div class="loved-checked"></div>
+                                </label>
+                            </div>
+                            <div class="col-12 loved-submit">
+                                <input type="button" value="点击编辑" id="loved-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer container-fluid">
+        <div class="container footer-content">
+            <span>版权所有@226车辆调度指挥系统责任有限公司</span>
+        </div>
+    </footer>
+    <!-- 编辑个人信息模态框 -->
+    <div class="modal fade" id="edit-userInfo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <form action="" method="POST" id="userInfoEditForm">
+                    <div class="modal-header bg-primary text-light ">
+                        <h5>编辑你的个人信息</h5>
+                        <button  class="btn-close btn-close-white"  data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="my-3">
+                            <label for="editNickname" class="form-label">昵称：</label>
+                            <input type="text" name="nickname" class="form-control" id="editNickname">
+                        </div>
+                        <div class="my-3">
+                            <span>性别：</span>
+                            
+                            <input type="radio" name="gender" value="男" class="" id="sex1">
+                            <label for="sex1">男</label>
+                            
+                            <input type="radio" name="gender" value="女" class="" id="sex2">
+                            <label for="sex2">女</label>
+
+                            
+                            <input type="radio" name="gender" value="保密" class="" id="sex3">
+                            <label for="sex3">保密</label>
+                        </div>
+                        <div class="my-3">
+                            <label for="editBirthday" class="form-label">你的出身日期：</label>
+                            <input type="date" class="form-control" id="editBirthday" name="birthday">
+                        </div>
+                        <div class="my-3">
+                            <label for="editProfile">我的简介：</label>
+                            <textarea name="profile" id="editProfile" class="form-control" placeholder="输入你的个人简介" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button  class="btn btn-primary" type="submit">保存更改</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="userHeadEdit" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <form action="" method="POST" id="userHeadEditForm">
+                    <div class="modal-header bg-primary text-light ">
+                        <h5>编辑你的头像</h5>
+                        <button  class="btn-close btn-close-white"  data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body img-select">
+                        <div class="img-frame">
+                            <label for="head0">
+                                <input type="radio" id="head0" name="head" value="head0.jpg" class="headInput">
+                                <img src="../images/HeadImage/head0.jpg">
+                            </label>
+                        </div>
+                        <div class="img-frame">
+                            <label for="head1">
+                                <input type="radio" id="head1" name="head" value="head1.jpg" class="headInput">
+                                <img src="../images/HeadImage/head1.jpg" >
+                            </label>
+                        </div>
+                        <div class="img-frame">
+                            <label for="head2">
+                                <input type="radio" id="head2" name="head" value="head2.jpg" class="headInput">
+                                <img src="../images/HeadImage/head2.jpg" >
+                            </label>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button  class="btn btn-primary" type="submit">确定编辑</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scrollreveal.min.js"></script>
+    <script src="../js/animate.js"></script>
+    <script src="../js/page.js"></script>
+    <script src="../js/user.js"></script>
+</body>
+</html>

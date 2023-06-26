@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云遗科技-非遗查找</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/game.css">
+
+
+    <link rel="stylesheet" href="../museum-master/css/导览.css">
+    <link rel="stylesheet" type="text/css" href="../museum-master/css/header.css">
+    <script src="../museum-master/font_1419650_2mvj4ofzt78/iconfont.js"></script>
+    <script src="../museum-master/js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.me').click(function(){
+                $('.navbar').css('display','block')
+            });
+            $('.layer .close').click(function(){
+                $('.navbar').css('display','none')
+            });
+
+        })
+    </script>
+
+
+
+</head>
+
+
+<body>
+
+
+        <div class="header">
+            <div class="wrap">
+                <div class="logo" style="background:none;">
+                    <a href="../index.html"><img src="../museum-master/img/headerlogo.png" alt="故宫博物院" style="margin-top: 8px;"></a>
+                </div>
+                <div class="nav_main">
+                    <ul>
+                        <li><a href="../museum-master/index.html">首页</a><b><img src="" width="18"></b></li>
+                        <li><a href="../museum-master/html/非遗地图.html">非遗地图</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                        <li><a href="非遗查询.html">非遗查询</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                        <li><a href="../museum-master/html/知识图谱.html">知识图谱</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                        <li><a href="../museum-master/html/学术 (2).html">非遗传承人</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                        <li><a href="../museum-master/html/文创.html">文创</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                        <li><a href="../museum-master/html/非遗论坛.html">非遗论坛</a><b><img src="../museum-master/img/arrow1.png" width="18"></b></li>
+                    </ul>
+                </div>
+
+
+                <div class="tools">
+                    <div class="d us login">
+                        <span><img width="17" src="../museum-master/img/ico_tools_search.png"></span>
+                        <div class="loginbox">
+                            <a class="a" href="../index.html">登录/注册</a>
+                            <a class="a" href="我的信息.html">我的信息</a>
+                        </div>
+                    </div>
+                    <div class="d la lang">
+                        <span><img src="../museum-master/img/zhong1.png"></span>
+                        <div class="language">
+                            <a class="a" href="" target="_blank">EN</a>
+                            <a class="a" href="" target="_blank">青少版</a>
+                        </div>
+                    </div>
+                    <div class="d sc scbtn">
+                        <span><img width="17" src="../museum-master/img/ico_tools_user.png"></span>
+                        <div class="search">
+                            <input type="text" class="kw" value="搜索关键词..." onfocus="if(this.value='搜索关键词...'){this.value=''}" onblur="if(this.value==''){this.value='搜索关键词...'}">
+                            <input type="button" class="ok">
+                        </div>
+                    </div>
+                    <div class="d me">
+                        <a href="javascript:;"><img src="../museum-master/img/menu2-1.png"></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="popWindow navbar children">
+            <div class="layer">
+                <a href="javascript:;" class="close"></a>
+                <div class="list">
+                    <div class="">
+                        <div class="item">
+                            <a href="" style="color:#fff;">
+                                <h1>导览</h1></a>
+                            <dl>
+                                <dd>
+                                    <a href="">开放时间</a>
+                                </dd>
+                                <dd>
+                                    <a href="">票务服务</a>
+                                </dd>
+                                <dd>
+                                    <a href="">交通路线</a>
+                                </dd>
+                                <dd>
+                                    <a href="">游览须知</a>
+                                </dd>
+                                <dd>
+                                    <a href="" target="_blank">全景故宫</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <a href="" style="color:#fff;">
+                                <h1>展览</h1></a>
+                            <dl>
+                                <dd>
+                                    <a href="">近期展览</a>
+                                </dd>
+                                <dd>
+                                    <a href="">专馆</a>
+                                </dd>
+                                <dd>
+                                    <a href="">原状陈列</a>
+                                </dd>
+                                <dd>
+                                    <a href="">赴外展览</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <a href="" style="color:#fff;">
+                                <h1>教育</h1></a>
+                            <dl>
+                                <dd>
+                                    <a href="">教育新闻</a>
+                                </dd>
+                                <dd>
+                                    <a href="">故宫博物院教育中心</a>
+                                </dd>
+                                <dd>
+                                    <a href="">国际博协培训中心</a>
+                                </dd>
+                                <dd>
+                                    <a href="">故宫志愿者</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <a href="" style="color:#fff;">
+                                <h1>探索</h1></a>
+                            <dl>
+                                <dd>
+                                    <a href="">建筑</a>
+                                </dd>
+                                <dd>
+                                    <a href="">藏品</a>
+                                </dd>
+                                <dd>
+                                    <a href="">古籍</a>
+                                </dd>
+                                <dd>
+                                    <a href="">宫廷历史</a>
+                                </dd>
+                                <dd>
+                                    <a href="">文物医院</a>
+                                </dd>
+                                <dd>
+                                    <a href="">文化专题</a>
+                                </dd>
+                                <dd>
+                                    <a href="" target="_blank">名画记</a>
+                                </dd>
+                                <dd>
+                                    <a href="" target="_blank">数字多宝阁</a>
+                                </dd>
+                                <dd>
+                                    <a href="" target="_blank">数字文物库</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <a href="" style="color:#fff;">
+                                <h1>学术</h1></a>
+                            <dl>
+                                <dd>
+                                    <a href="">学术活动</a>
+                                </dd>
+                                <dd>
+                                    <a href="">专家名录</a>
+                                </dd>
+                                <dd>
+                                    <a href="">故宫研究院</a>
+                                </dd>
+                                <dd>
+                                    <a href="">故宫学院</a>
+                                </dd>
+                                <dd>
+                                    <a href="">其他学术机构</a>
+                                </dd>
+                                <dd>
+                                    <a href="">故宫博物院院刊</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <a href="" style="color:#fff;">
+                                <h1>文创</h1></a>
+                            <dl>
+                                <dd>
+                                    <a href="">故宫出版</a>
+                                </dd>
+                                <dd>
+                                    <a href="">文创产品</a>
+                                </dd>
+                                <dd>
+                                    <a href="">故宫壁纸</a>
+                                </dd>
+                                <dd>
+                                    <a href="">故宫APP</a>
+                                </dd>
+                                <dd>
+                                    <a href="" target="_blank">故宫游戏</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <a href="" style="color:#fff;">
+                                <h1>关于</h1></a>
+                            <dl>
+                                <dd>
+                                    <a href="">总说</a>
+                                </dd>
+                                <dd>
+                                    <a href="">领导</a>
+                                </dd>
+                                <dd>
+                                    <a href="">资讯</a>
+                                </dd>
+                                <dd>
+                                    <a href="">院史编年</a>
+                                </dd>
+                                <dd>
+                                    <a href="">景仁榜</a>
+                                </dd>
+                                <dd>
+                                    <a href="">机构设置</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container game-area">
+            <div class="game-content">
+                <div class="game-head row">
+                    <div class="game-category col-lg-4">
+                        <span>按非遗类别筛选：</span>
+                        <div class="d-inline-block">
+                            <select name="game-category-select" id="category" class="form-select my-2 text-primary">
+                                <option value="全部非遗项目">全部项目</option>
+                                <option value="民间文学">民间文学</option>
+                                <option value="传统音乐">传统音乐</option>
+                                <option value="传统舞蹈">传统舞蹈</option>
+                                <option value="传统戏剧">传统戏剧</option>
+                                <option value="曲艺">曲艺</option>
+                                <option value="传统体育、游艺与杂技">传统体育、游艺与杂技</option>
+                                <option value="传统美术">传统美术</option>
+                                <option value="传统技艺">传统技艺</option>
+                                <option value="传统医药">传统医药</option>
+                                <option value="民俗">民俗</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="game-search col-lg-4">
+                        <span>按非遗名称搜索：</span>
+                        <div class="search-area d-inline-block">
+                            <input type="text" name="searchText" placeholder="输入非物质文化遗产名称：" class="search-input form-control">
+                            <i class="fa fa-search search-btn"></i>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="game-list">
+                    <ul class="row gameList">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer container-fluid">
+        <div class="container footer-content">
+            <span>版权所有---云遗科技有限公司</span>
+        </div>
+    </footer>
+
+
+    <div class="modal fade" id="gameInfo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+            <div class="modal-content">
+                <div id="gameInfo-add">
+                    <div class="modal-header game-top text-light ">
+                        <h5 id="gameName">糖豆人：终极淘汰赛</h5>
+                        <button  class="btn-close btn-close-white"  data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body container game">
+                        <div class="gameInfo-content row ">
+                            <div class="col-lg-6 col-12 gameInfo-picture">
+                                <img src="../images/GameImage/game8.jpg" id="game-pc">
+                            </div>
+                            <div class="col-lg-6 gameInfo-text">
+                                <div class="gameInfo-header">
+                                    <h2 id="game-info-cname">鬼泣5</h2>
+                                    <h5 id="game-info-ename">Devil May Cry V</h5>
+                                </div>
+                                <div class="gameInfo-content">
+                                    <div>申报地区：<span id="game-info-developer">卡普空</span></div>
+                                    <div>申报时间：<span id="game-info-date">2019-09-06</span></div>
+                                    <div class="game-profile-area">非物质文化遗产介绍：
+                                        <div class="game-profile">
+                                            《鬼泣5》不但是系列的集大成者，而且在战斗、叙事、关卡节奏、重复游玩等方面均出现了长足进步。它是迄今为止最好的动作游戏之一，在《猎天使魔女3》问世之前，很难想象会有其他动作游戏能够与之相提并论 [11]  （《游民星空》评）
+《鬼泣5》在玩法内核上依然延续了系列一直以来的设计，当初或许有观点认为它缺少变化，但现在看来，一，它做了变化；二，它没做变化的，表现得更好。当CAPCOM把这传统的ACT玩法用最新技术去呈现，玩家就会发现，硬核ACT的玩法经得起时间的考验，它在这个时代依然熠熠生辉 [10]  （《VGTime》评）
+                                        </div>
+                                    </div>
+                                    <div class="game-score-area">
+                                        <h5>大众喜欢程度：</h5>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                        <div class="star"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/scrollreveal.min.js"></script>
+    <script src="../js/animate.js"></script>
+    <script src="../js/page.js"></script>
+    <script src="../js/game.js"></script>
+</body>
+</html>
